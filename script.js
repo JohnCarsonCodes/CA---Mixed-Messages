@@ -1,5 +1,7 @@
 const randNum = prop => Math.floor(Math.random() * prop);
 
+let pushups = 1;
+
 let games = [
     {
         name: "Fortnite",
@@ -16,14 +18,25 @@ let games = [
 ]
 
 const getChallenge = () => {
-    let game, title, challenge, pushups;
+    let game, title, challenge;
 
     game = games[randNum(games.length)];
     title = game.name;
     challenge = game.challenge[randNum(game.challenge.length)];
-    pushups = randNum(10) + 1;
+    pushups += randNum(10);
 
     document.getElementById('name').innerHTML = title;
     document.getElementById('challenge').innerHTML = challenge;
     document.getElementById('pushups').innerHTML = `${pushups} Pushups on Failure`;
+    document.getElementById('btn').innerHTML = 'Re-Roll';
+    document.getElementById('reset').style.visibility = 'visible';
+}
+
+const reset = () => {
+    pushups = 1;
+    document.getElementById('name').innerHTML = '';
+    document.getElementById('challenge').innerHTML = '';
+    document.getElementById('pushups').innerHTML = '';
+    document.getElementById('btn').innerHTML = 'Get Challenge';
+    document.getElementById('reset').style.visibility = 'hidden';
 }
