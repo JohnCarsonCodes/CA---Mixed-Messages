@@ -1,0 +1,13 @@
+JavaScript > Random Number Generator for each array
+JavaScript > Random Number Generator to create function to provide a Number
+JavaScript > Various arrays with various messages within them
+
+When running, random game will be generated
+After game is selected, a random challenge will then be generated
+After challenge is generated, random amount of pushups will be generated (between 1-10) if failed
+
+1 Random Number Generator with no prop
+1 Random Number Generator with prop
+
+Function Random(): Random Num Gen 1-5 > Function Random(prop): Random num generated to select index within boundaries of array > Function Random(prop): Ramdon num between 1-10
+Function Output(game, gamenumPushups): Create output string that shows the Game Name, Challenge and number of pushups if failed
